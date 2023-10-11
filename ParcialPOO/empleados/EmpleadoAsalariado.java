@@ -12,7 +12,9 @@ public class EmpleadoAsalariado extends Empleado {
         super(nombre, salario);
         this.deducciones = deducciones;
     }
-
+    public double getDeducciones(){
+        return deducciones;
+    }
     @Override
     public double calcularSalario() {
         return salario - deducciones;
