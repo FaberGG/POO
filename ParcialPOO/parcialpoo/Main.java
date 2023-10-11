@@ -59,18 +59,23 @@ public class Main {
         for (Empleado empleado : objetos) {
             System.out.println("Los empleados por hora son:");
             if (empleado instanceof EmpleadoPorHoras) {
-                System.out.println("Empleado " + (i + 1));
-                System.out.println(" Nombre:" + objetos.get(i).getNombre());
-                System.out.println(" Salario:" + objetos.get(i).getSalario());
+                EmpleadoPorHoras empleadoPorHoras = (EmpleadoPorHoras) empleado;
+                System.out.println("Trabajador por horas:");
+                System.out.println("Nombre: " + empleadoPorHoras.getNombre());
+                System.out.println("Salario: " + empleadoPorHoras.getSalario());
+                System.out.println("Horas trabajadas: " + empleadoPorHoras.getHorasTrabajadas());
+                System.out.println("Tarifa por hora: " + empleadoPorHoras.getTarifaHora());
             }
         }
         // obtener empleados por deducciones
         for (Empleado empleado : objetos) {
             System.out.println("Los empleados por salario fijo son son:");
-            if(empleado instanceof EmpleadoAsalariado){
-                System.out.println("Empleado " + (i + 1));
-                System.out.println(" Nombre:" + objetos.get(i).getNombre());
-                System.out.println(" Salario:" + objetos.get(i).getSalario());
+             else if (empleado instanceof EmpleadoAsalariado) {
+                EmpleadoAsalariado empleadoAsalariado = (EmpleadoAsalariado) empleado;
+                System.out.println("Trabajador con salario fijo:");
+                System.out.println("Nombre: " + empleadoAsalariado.getNombre());
+                System.out.println("Salario: " + empleadoAsalariado.getSalario());
+                System.out.println("Deducciones: " + empleadoAsalariado.getDeducciones());
             }
         }
         //Modificar el nombre o salario de un empleado
@@ -101,9 +106,12 @@ public class Main {
         for (Empleado empleado : objetos) {
             System.out.println("Los empleados por hora son:");
             if (empleado instanceof EmpleadoPorHoras) {
-                System.out.println("Empleado " + (i + 1));
-                System.out.println(" Nombre:" + objetos.get(i).getNombre());
-                System.out.println(" Salario:" + objetos.get(i).getSalario());
+                EmpleadoPorHoras empleadoPorHoras = (EmpleadoPorHoras) empleado;
+                System.out.println("Trabajador por horas:");
+                System.out.println("Nombre: " + empleadoPorHoras.getNombre());
+                System.out.println("Salario: " + empleadoPorHoras.getSalario());
+                System.out.println("Horas trabajadas: " + empleadoPorHoras.getHorasTrabajadas());
+                System.out.println("Tarifa por hora: " + empleadoPorHoras.getTarifaHora());
             }
         }
 
